@@ -1,16 +1,14 @@
-body {
-  display: table; }
+#main-wrapper {
+  padding: 1%;
+  margin: 1%; }
 
-.left-side, .right-side {
-  float: none;
-  display: table-cell; }
-
-#space {
-  width: 5%; }
+html, body, div, form {
+  height: 95%; }
 
 header {
   border: 2px solid black;
-  background-color: #FFB4B0; }
+  background-color: #FFB4B0;
+  padding: 1%; }
 
 nav ul {
   list-style: none;
@@ -22,29 +20,43 @@ nav a {
     border: none; }
 nav li {
   display: inline-block;
-  text-decoration: underline; }
+  text-decoration: underline;
+  margin: 0 2%; }
   nav li.selected {
     text-decoration: none;
     color: black; }
 
 #player {
-  margin: 2% 0 0 0;
-  width: 100%; }
+  width: 100%;
+  margin: 2% 0 0 0; }
 
 div#controls {
   border: 2px solid black;
   background-color: #4DD7FA;
-  height: 100%; }
+  width: 22%;
+  float: left;
+  padding: 1%;
+  display: block; }
   div#controls input {
-    display: block; }
+    display: block;
+    padding: 2%;
+    margin: 2% 0; }
+  div#controls label {
+    margin: 3% 0; }
 
-div#genre table {
-  text-align: left; }
-div#genre caption {
-  text-align: left;
-  line-height: 1.5; }
-div#genre td input {
-  outline: 1.5px solid black; }
+div#genre {
+  margin: 15% 0 30% 0;
+  height: auto; }
+  div#genre table {
+    text-align: left; }
+  div#genre caption {
+    text-align: left;
+    line-height: 1.5; }
+  div#genre td {
+    padding: 5% 5%;
+    margin-right: 2%; }
+    div#genre td input {
+      outline: 1.5px solid black; }
 
 input[name="artist"], input[name="album"] {
   border: 2px solid black;
@@ -54,13 +66,16 @@ button {
   border: 2px solid black;
   border-radius: 5px;
   display: block;
-  text-align: center; }
+  text-align: center;
+  margin: 20% auto;
+  width: 50%; }
 
 div#songs {
   border: 2px solid black;
   background-color: #FEFAC0;
-  vertical-align: top;
-  height: 100%; }
+  float: right;
+  width: 70%;
+  padding: 1%; }
   div#songs p {
     display: inline-block;
     border-right: 1px solid black;

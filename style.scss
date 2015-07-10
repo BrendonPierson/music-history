@@ -6,24 +6,19 @@ $darkYel: #785616;
 @mixin box_border (){
   border: 2px solid black;
 }
-
-body {
-  display: table;
+#main-wrapper {
+  padding: 1%;
+  margin: 1%;
 }
 
-.left-side, .right-side {
-  float: none;
-  display: table-cell;
-}
-
-#space{
-  width: 5%;
-  
+html, body, div, form {
+height: 95%;
 }
 
 header {
   @include box_border;
   background-color: $red;
+  padding: 1%;
 }
 
 nav {
@@ -41,6 +36,7 @@ nav {
   li {
     display: inline-block;
     text-decoration: underline;
+    margin:0 2%;
     &.selected {
       text-decoration: none;
       color: black;
@@ -49,22 +45,32 @@ nav {
 }
 
 #player {
-  margin: 2% 0 0 0;
   width: 100%;
+  margin: 2% 0 0 0;
 }
 
 
 div#controls {
   @include box_border;
   background-color: $blue;
-  height: 100%;
+  width: 22%;
+  float: left;
+  padding: 1%;
+  display: block;
   input {
     display: block;
+    padding: 2%;
+    margin: 2% 0;
+  }
+  label {
+    margin: 3% 0;
   }
 }
 
 
 div#genre  {
+  margin: 15% 0 30% 0;
+  height: auto;
   table{
     text-align:left;
   }
@@ -73,6 +79,8 @@ div#genre  {
     line-height: 1.5;
   }
   td {
+    padding: 5% 5%;
+    margin-right: 2%;
     input{
       outline: 1.5px solid black;
     }
@@ -89,13 +97,16 @@ button {
   border-radius: 5px;
   display: block;
   text-align: center;
+  margin: 20% auto;
+  width: 50%;
   }
 
 div#songs {
   @include box_border;
   background-color: $lightYel;
-  vertical-align: top;
-  height: 100%;
+  float: right;
+  width: 70%;
+  padding: 1%;
   p {
     display: inline-block;
     border-right: 1px solid black;
@@ -113,3 +124,5 @@ div#songs {
     border: none;
   }
 }
+
+
