@@ -1,9 +1,20 @@
+body {
+  display: table; }
+
+.left-side, .right-side {
+  float: none;
+  display: table-cell; }
+
+#space {
+  width: 5%; }
+
 header {
   border: 2px solid black;
   background-color: #FFB4B0; }
 
 nav ul {
-  list-style: none; }
+  list-style: none;
+  margin: 1% 0 1% 0; }
 nav a {
   text-decoration: underline;
   border-right: 1px solid black; }
@@ -12,16 +23,18 @@ nav a {
 nav li {
   display: inline-block;
   text-decoration: underline; }
+  nav li.selected {
+    text-decoration: none;
+    color: black; }
 
-li.selected {
-  text-decoration: none;
-  color: black; }
+#player {
+  margin: 2% 0 0 0;
+  width: 100%; }
 
 div#controls {
-  display: inline-block;
   border: 2px solid black;
   background-color: #4DD7FA;
-  vertical-align: top; }
+  height: 100%; }
   div#controls input {
     display: block; }
 
@@ -46,8 +59,8 @@ button {
 div#songs {
   border: 2px solid black;
   background-color: #FEFAC0;
-  display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  height: 100%; }
   div#songs p {
     display: inline-block;
     border-right: 1px solid black;

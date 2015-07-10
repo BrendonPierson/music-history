@@ -7,6 +7,20 @@ $darkYel: #785616;
   border: 2px solid black;
 }
 
+body {
+  display: table;
+}
+
+.left-side, .right-side {
+  float: none;
+  display: table-cell;
+}
+
+#space{
+  width: 5%;
+  
+}
+
 header {
   @include box_border;
   background-color: $red;
@@ -15,6 +29,7 @@ header {
 nav {
   ul {
     list-style:none;
+    margin: 1% 0 1% 0;
   }
   a {
     text-decoration: underline;
@@ -26,19 +41,23 @@ nav {
   li {
     display: inline-block;
     text-decoration: underline;
+    &.selected {
+      text-decoration: none;
+      color: black;
+    }
   }
 }
 
-li.selected {
-  text-decoration: none;
-  color: black;
+#player {
+  margin: 2% 0 0 0;
+  width: 100%;
 }
 
+
 div#controls {
-  display: inline-block;
   @include box_border;
   background-color: $blue;
-  vertical-align: top;
+  height: 100%;
   input {
     display: block;
   }
@@ -75,8 +94,8 @@ button {
 div#songs {
   @include box_border;
   background-color: $lightYel;
-  display: inline-block;
   vertical-align: top;
+  height: 100%;
   p {
     display: inline-block;
     border-right: 1px solid black;
