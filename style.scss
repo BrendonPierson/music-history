@@ -7,22 +7,9 @@ $darkYel: #785616;
   border: 2px solid black;
 }
 
-div#wrapper {
-  width: 85%;
-  margin: 0 auto;
-  height: 100%;
-}
-
-div#player {
-  width: 100%;
-  height: 100%;
-}
-
 header {
   @include box_border;
-  margin: 2.5% auto 20px auto;
   background-color: $red;
-  padding: 0.5%;
 }
 
 nav {
@@ -38,7 +25,6 @@ nav {
   } 
   li {
     display: inline-block;
-    margin:0 3%;
     text-decoration: underline;
   }
 }
@@ -49,25 +35,18 @@ li.selected {
 }
 
 div#controls {
-  margin-right: 2%;
-  padding: 0.7%;
   display: inline-block;
   @include box_border;
   background-color: $blue;
-  width: 27%;
   vertical-align: top;
   input {
     display: block;
-    margin: 5% 4% 6%;
   }
 }
 
 
 div#genre  {
-  margin: 15% 0 0 0;
   table{
-    margin-bottom: 3%;
-    margin-top: 4%;
     text-align:left;
   }
   caption {
@@ -75,8 +54,6 @@ div#genre  {
     line-height: 1.5;
   }
   td {
-    padding: 5% 3%;
-    margin: 1%;
     input{
       outline: 1.5px solid black;
     }
@@ -92,19 +69,14 @@ button {
   @include box_border;
   border-radius: 5px;
   display: block;
-  width: 50%;
   text-align: center;
-  margin: 10% auto 25% auto;
   }
 
 div#songs {
   @include box_border;
-  padding: 0.9% 1% 4%;
   background-color: $lightYel;
   display: inline-block;
   vertical-align: top;
-  width: 66%;
-  height: 100%;
   p {
     display: inline-block;
     border-right: 1px solid black;
@@ -115,9 +87,7 @@ div#songs {
   h2 {
     color: $darkYel;
     line-height: .4;
-    margin-top: 30px;
     &:first-child {
-      margin-top: 10px;
     }
   }
   .noBorder {
