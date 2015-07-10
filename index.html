@@ -3,104 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
 </head>
 <body>
   <header>
-  <nav>
-    <ul>
-      <a href="#"><li class="selected">View Music</li></a>
-      <a href="#"><li>Add Music</li></a>
-      <a href="#"><li>Profile</li></a>
-    </ul>
-  </nav>
-</header>
-<div id="player">
-  <div id="controls">
-    <label for="songLength">Song Length:</label>
-    <input type="range" name="songLength">
-    <label for="album">Album:</label>
-    <input name="album" list="album" placeholder="options">
-      <datalist id="album">
-        <option value="Be the Void">
-          <option value="Doggystyle">
-            <option value="Rocket Man">
-              <option value="Locked Down">
-    </datalist>
-    <label for="artist">Artist:</label>
-    <input name="artist" list="artist" placeholder="options">
-      <datalist id="artist">
-        <option value="Dr. Dog">
-          <option value="Snoop Dog">
-            <option value="Elton John">
-              <option value="Dr. John">
+    <nav>
+      <ul>
+        <a href="#"><li class="selected">View Music</li></a>
+        <a href="#"><li>Add Music</li></a>
+        <a href="#"><li>Profile</li></a>
+      </ul>
+    </nav>
+  </header>
+  <div id="player">
+    <div id="controls">
+      <label for="songLength">Song Length:</label>
+      <input type="range" name="songLength">
+      <label for="album">Album:</label>
+      <input name="album" list="album" placeholder="options">
+        <datalist id="album">
+          <option value="Be the Void">
+            <option value="Doggystyle">
+              <option value="Rocket Man">
+                <option value="Locked Down">
       </datalist>
-    <div id="genre">
-      <table>
-        <caption>Genre:</caption>
-        <tr>
-          <td>
-            <input type="checkbox" name="rock" value="rock"> 
-          </td>
-          <td>
-             <label for="rock">Rock</label>        
-          </td>
-          <td>
-            <input type="checkbox" name="classical" value="classical">
-          </td>
-          <td>
-            <label for="classical">Classical</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" name="pop" value="pop">
-          </td>
-          <td>
-            <label for="pop">Pop</label>
-          </td>
-          <td>
-            <input type="checkbox" name="jazz" value="jazz">
-          </td>
-          <td>
-            <label for="jazz">Jazz</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" name="blues" value="blues">
-          </td>
-          <td>
-            <label for="blues">Blues</label>
-          </td>
-          <td>
-            <input type="checkbox" name="hiphop" value="hiphop">
-          </td>
-          <td>
-            <label for="hiphop">Hip Hop</label>
-          </td>
-        </tr>
-      </table>
+      <label for="artist">Artist:</label>
+      <input name="artist" list="artist" placeholder="options">
+        <datalist id="artist">
+          <option value="Dr. Dog">
+            <option value="Snoop Dog">
+              <option value="Elton John">
+                <option value="Dr. John">
+        </datalist>
+      <div id="genre">
+        <table>
+          <caption>Genre:</caption>
+          <tr>
+            <td>
+              <input type="checkbox" name="rock" value="rock"> 
+            </td>
+            <td>
+               <label for="rock">Rock</label>        
+            </td>
+            <td>
+              <input type="checkbox" name="classical" value="classical">
+            </td>
+            <td>
+              <label for="classical">Classical</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="pop" value="pop">
+            </td>
+            <td>
+              <label for="pop">Pop</label>
+            </td>
+            <td>
+              <input type="checkbox" name="jazz" value="jazz">
+            </td>
+            <td>
+              <label for="jazz">Jazz</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="blues" value="blues">
+            </td>
+            <td>
+              <label for="blues">Blues</label>
+            </td>
+            <td>
+              <input type="checkbox" name="hiphop" value="hiphop">
+            </td>
+            <td>
+              <label for="hiphop">Hip Hop</label>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <button type="submit" value="filter">Filter</button>
     </div>
-    <button type="submit" value="filter">Filter</button>
+    <div id="songs">
+      <h2>Song Name</h2>
+      <p>Artist Name</p>
+      <p>Album Name</p>
+      <p class="noBorder">Genre</p>
+      <h2>Song Name</h2>
+      <p>Artist Name</p>
+      <p>Album Name</p>
+      <p class="noBorder">Genre</p>
+      <h2>Song Name</h2>
+      <p>Artist Name</p>
+      <p>Album Name</p>
+      <p class="noBorder">Genre</p>
+      <h2>Song Name</h2>
+      <p>Artist Name</p>
+      <p>Album Name</p>
+      <p class="noBorder">Genre</p>
+    </div>
   </div>
-  <div id="songs">
-    <h2>Song Name</h2>
-    <p>Artist Name</p>
-    <p>Album Name</p>
-    <p class="noBorder">Genre</p>
-    <h2>Song Name</h2>
-    <p>Artist Name</p>
-    <p>Album Name</p>
-    <p class="noBorder">Genre</p>
-    <h2>Song Name</h2>
-    <p>Artist Name</p>
-    <p>Album Name</p>
-    <p class="noBorder">Genre</p>
-    <h2>Song Name</h2>
-    <p>Artist Name</p>
-    <p>Album Name</p>
-    <p class="noBorder">Genre</p>
-  </div>
-</div>
 </body>
 
