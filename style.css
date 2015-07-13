@@ -1,92 +1,209 @@
-#main-wrapper {
-  padding: 1%;
-  margin: 1%; }
+/***** General Layout Formatting ******/
+html, body {
 
-html, body, div, form {
-  height: 95%;
-  font-size: 1em; }
+}
 
-header {
-  border: 2px solid black;
-  background-color: #FFB4B0;
-  padding: 1%; }
+/***** nav bar *****/
+#nav_bar ul {
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
+	/*margin and padding 0 gets rid of auto padding*/
+}
+#nav_bar ul a {
+	display: block;
+	padding: 4% 0;
+}
 
-nav ul {
-  list-style: none;
-  margin: 1% 0 1% 0; }
-nav a {
-  text-decoration: underline;
-  border-right: 1px solid black; }
-  nav a:last-child {
-    border: none; }
-nav li {
-  display: inline-block;
-  text-decoration: underline;
-  margin: 0 2%; }
-  nav li.selected {
-    text-decoration: none;
-    color: black; }
+#nav_bar ul a li {
+	list-style-type: none;
+	text-align: center;
+}
 
-#player {
-  width: 100%;
-  margin: 2% 0 0 0; }
 
-div#controls {
-  border: 2px solid black;
-  background-color: #4DD7FA;
-  width: 22%;
-  float: left;
-  padding: 1%;
-  display: block; }
-  div#controls input {
-    display: block;
-    padding: 2%;
-    margin: 2% 0; }
-  div#controls label {
-    margin: 3% 0; }
 
-div#genre {
-  margin: 15% 0 30% 0;
-  height: auto; }
-  div#genre table {
-    text-align: left; }
-  div#genre caption {
-    text-align: left;
-    line-height: 1.5; }
-  div#genre td {
-    padding: 5% 5%;
-    margin-right: 2%; }
-    div#genre td input {
-      outline: 1.5px solid black; }
 
-input[name="artist"], input[name="album"] {
-  border: 2px solid black;
-  border-radius: 5px; }
+/***** controls *****/
+
+#controls {
+	padding: 0 0 8% 0;
+	border: 1px solid black;
+}
+
+#controls form > label{
+	display: block;
+	padding: 3%;
+}
+
+#controls form > input {
+	display: block;
+	margin: 0 0 0 3%;
+	border: 1px solid black;
+}
+#genre h4 {
+	padding: 0 0 0 6%;
+}
+#genre .floatLeft {
+	float: left;
+	clear: left;
+	padding: 0 0 0 6%;
+}
+#genre .floatRight {
+	float: right;
+	clear: right;
+	padding: 0 6% 0 0;
+}
+.checkBoxDiv input[type="checkbox"]{
+	outline: 1px solid black;
+}
+
+div#clear {
+	clear: both;
+	padding: 10%;
+}
 
 button {
-  border: 2px solid black;
-  border-radius: 5px;
-  display: block;
-  text-align: center;
-  margin: 20% auto;
-  width: 50%; }
+	display: block;
+	margin: 0 auto 0 auto;
+	width: 75%;
+	padding: 5% 0 5% 0;
+	border: 1px solid black;
+	border-radius: 7.5%;
+}
 
-div#songs {
-  border: 2px solid black;
-  background-color: #FEFAC0;
-  float: right;
-  width: 70%;
-  padding: 1%; }
-  div#songs p {
-    display: inline-block;
-    border-right: 1px solid black;
-    margin-right: 5px;
-    padding-right: 5px;
-    text-align: center; }
-  div#songs h2 {
-    color: #785616;
-    line-height: .4; }
-  div#songs .noBorder {
-    border: none; }
 
-/*# sourceMappingURL=style.css.map */
+
+
+/****** Song Info ******/
+
+#info {
+	border: 1px solid black;
+	padding: 4%;
+}
+
+#info ul{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#info ul li {
+	display: block;
+	list-style-type: none;
+	
+	padding: 1% 3% 1% 1%;
+}
+
+#info ul li:last-child {
+	border: none;
+}
+
+.songInfo {
+	padding: 4% 0;
+}
+
+h1 {
+	margin: 0;
+	padding-bottom: 2%;
+	text-align: center;
+}
+
+
+/***** Media Queries *****/
+
+@media (min-width: 320px){
+	body { 
+		padding: 5%
+	}
+	#nav_bar {
+		margin: 5% auto;
+		text-align: center;
+	}
+	#nav_bar ul a {
+		margin: 0;
+		display: inline;
+	}
+	#nav_bar ul a li {
+		border-right: 1px solid black;
+		margin: 3%;
+		padding: 0 3%;
+		display: inline-block;
+	}
+	#nav_bar ul a li.noBorder {
+		border: none;
+	}
+	#controls {
+		margin-bottom: 5%;
+	}
+	#info ul li {
+		display: inline-block;
+		border-right: 1px solid black;
+	}
+}
+
+@media (min-width: 468px){
+	#nav_bar {
+		text-align: left;
+	}
+	#nav_bar ul a li {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#main-wrapper {
+		display: flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: -moz-flex;
+	}
+	#controls {
+		flex: 1;
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		-mz-flex: 1;
+		margin: 0 5% 0 0;
+	}
+	#info {
+		flex: 1;
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		-moz-flex: 1;
+	}
+}
+
+@media (min-width: 768px) {
+	#info {
+		flex: 2;
+		-webkit-flex: 2;
+		-ms-flex: 2;
+		-moz-flex: 2;
+	}
+	#info h1,
+	#info ul {
+		text-align: left;
+	}
+}
+
+@media (min-width: 1000px) {
+	#info {
+		flex: 3;
+		-webkit-flex: 3;
+		-ms-flex: 3;
+		-moz-flex: 3;
+	}
+}
+
+
+
+/***** colors ****/
+#nav_bar {
+	background-color: #FFB4B0; 
+}
+
+#controls {
+	background-color: #4DD7FA;
+}
+
+#info {
+	background-color: #FEFAC0;
+	color:#785616;
+}
