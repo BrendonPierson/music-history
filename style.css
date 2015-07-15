@@ -82,6 +82,10 @@ button {
 	padding: 4%;
 }
 
+.songInfo {
+	padding: 5% auto;
+}
+
 #info ul{
 	margin: 0;
 	padding: 0;

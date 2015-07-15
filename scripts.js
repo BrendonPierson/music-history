@@ -8,26 +8,43 @@ songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little
 
 
 // Each student must add one song to the beginning and the end of the array.
-songs.unshift("Thunder Road by Bruce Springsteen on the album Born to Run");
-songs[songs.length] = "Lonsome by Dr. Dog on the album Be the Void";
+songs.unshift("Thunder Road - by Bruce Springsteen on the album Born to Run");
+songs[songs.length] = "Lonsome - by Dr. Dog on the album Be the Void";
 
-console.log(songs)
+
 
 // Loop over the array and remove any words or characters that obviously don't belong.
 for (var i = 0; i < songs.length; i++) {
-	songs[i].replace(/@/g, "");
-	songs[i].replace(/(/g, "");
-	songs[i].replace(/!/g, "");
-	songs[i].replace(/>/g, "-")
+	var charIndex = -1;
+	var charIndex = songs[i].indexOf(">");
+	if (charIndex !== -1){
+		songs[i] = songs[i].slice(0, charIndex) + "-" + songs[i].slice(charIndex + 1, songs[i].length);
+	}
 }
 
-console.log(songs)
+function charRemove(char) {
+	for (var i = 0; i < songs.length; i++) {
+		var charIndex = -1;
+		var charIndex = songs[i].indexOf(char);
+		if (charIndex !== -1) {
+			songs[i] = songs[i].slice(0, charIndex) + songs[i].slice(charIndex + 1, songs[i].length);
+		}
+	}
+}
+
+charRemove("@")
+charRemove("(")
+charRemove("!")
+
+
+
+console.log("revised songs list" + songs);
 
 // Students must find and replace the > character in each item with a - character.
 html = "";
 
 for (var i = 0; i < songs.length; i++){
-	html += "<div>" + songs[i] + "</div>";
+	html += '<div class="songInfo">' + songs[i] + "</div>";
 }
 
 document.getElementById("info").innerHTML = html;
