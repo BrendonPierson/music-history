@@ -79,39 +79,24 @@ button {
 
 #info {
 	border: 1px solid black;
+}
+
+.songInfo {
 	padding: 4%;
 }
 
-.songInfo {
-	padding: 5% auto;
+/*The entire container for the even songs (plus its details) should have a background color of Sea Shell (SeaShell or #FFF5EE)*/
+#info :nth-child(even) {
+	background-color: #FFF5EE;
 }
 
-#info ul{
-	margin: 0;
-	padding: 0;
-	text-align: center;
+#info :nth-child(odd) {
+	background-color: #F5FFFA;
+}
+#info :first-child{
+	font-weight: bold;
 }
 
-#info ul li {
-	display: block;
-	list-style-type: none;
-	
-	padding: 1% 3% 1% 1%;
-}
-
-#info ul li:last-child {
-	border: none;
-}
-
-.songInfo {
-	padding: 4% 0;
-}
-
-h1 {
-	margin: 0;
-	padding-bottom: 2%;
-	text-align: center;
-}
 
 
 /***** Media Queries *****/
