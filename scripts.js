@@ -36,3 +36,15 @@ for (var i = 0; i < songs.length; i++){
 
 document.getElementById("info").innerHTML = html;
 
+// Experimenting with object song notation
+function Song(name, artist, album) {
+	this.name = name;
+	this.artist = artist;
+	this.album = album;
+}
+
+var dd = new Song("Lonesome", "Dr.Dog", "Be the Void");
+console.log(dd.name)
+
+
+

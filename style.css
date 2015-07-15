@@ -1,14 +1,20 @@
 /***** General Layout Formatting ******/
 html, body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    max-width: 1200px;
 }
 
 /***** nav bar *****/
+
+#nav_bar {
+	max-height: 70px;
+}
 #nav_bar ul {
 	margin: 0;
 	padding: 0;
 	border: 1px solid black;
+	max-height: 70px;
 	/*margin and padding 0 gets rid of auto padding*/
 }
 #nav_bar ul a {
@@ -40,6 +46,7 @@ html, body {
 	display: block;
 	margin: 0 0 0 3%;
 	border: 1px solid black;
+	width: 90%;
 }
 #genre h4 {
 	padding: 0 0 0 6%;
@@ -47,12 +54,14 @@ html, body {
 #genre .floatLeft {
 	float: left;
 	clear: left;
-	padding: 0 0 0 6%;
+	padding: 0 0 0 10%;
+	margin: 0 auto;
 }
 #genre .floatRight {
 	float: right;
 	clear: right;
-	padding: 0 6% 0 0;
+	padding: 0 10% 0 0;
+	margin: 0 auto;
 }
 .checkBoxDiv input[type="checkbox"]{
 	outline: 1px solid black;
