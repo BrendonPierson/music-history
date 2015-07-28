@@ -90,22 +90,45 @@ button {
 	border: 1px solid black;
 }
 
-.songInfo {
-	padding: 4%;
+.song {
+	padding: 1% 4%;
+	clear: both;
+	color: black;
+	font-weight: normal;
+}
+.song h3 {
+	text-align: center;
+	border-bottom: 1px solid black;
+	padding: 0 0 2% 0;
 }
 
-/*The entire container for the even songs (plus its details) should have a background color of Sea Shell (SeaShell or #FFF5EE)*/
-#info :nth-child(even) {
-	background-color: #FFF5EE;
+.song p {
+	display: inline-block;
+	float: left;
+	margin-top: 0;
 }
 
-#info :nth-child(odd) {
-	background-color: #F5FFFA;
+.song p:nth-child(even){
+	float: right;
+	margin-top: 0;
 }
-#info :first-child{
-	font-weight: bold;
+button[value="delete"] {
+	width: 20%;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	clear: both;
 }
 
+button#addMoreSongs,
+button#lessSongs {
+	width: 50%;
+	padding: 2%;
+	background-color:#FFB4B0;
+	color: #000;
+	margin: 2% auto ;
+	border-radius: 100%;
+}
 
 
 /***** Media Queries *****/
